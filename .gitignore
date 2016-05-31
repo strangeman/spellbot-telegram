@@ -1,4 +1,4 @@
 # Bundler
-Gemfile.lock
+# Gemfile.lock
 bin/*
 .bundle/*
