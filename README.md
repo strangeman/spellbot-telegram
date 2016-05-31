@@ -25,3 +25,6 @@ Simple Telegram bot for sending site fragments to chat when users clicks Ctrl+En
 * Launch bot.rb on your favorite server with your favorite software (I prefer Heroku)
 * Get your chat_id with /info command
 * Add ctrlEnter.js to your site (do not forget change https://yourbot.com to your bot URL)
+
+# P.S.
+Thank Ganeshji Marwaha for this article: http://www.gmarwaha.com/blog/2009/06/16/ctrl-key-combination-simple-jquery-plugin/. I don't know JS and this text helped me a lot.
