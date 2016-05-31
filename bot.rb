@@ -22,6 +22,13 @@ class SpellBot
             end
           when '/info'
             @bot.api.sendMessage(chat_id: message.chat.id, text: "Sir, your chat_id is #{message.chat.id}")
+          when '/help'
+            help_text = 'Bot commands'\
+                        '* /start - did nothing, just confirm that bot is works'\
+                        '* /info - returns your chat_id'\
+                        '* /help - returns commands explanation'\
+                        'Github: https://github.com/strangeman/spellbot-telegram'
+            @bot.api.sendMessage(chat_id: message.chat.id, text: help_text)
           end
         end
       end
@@ -39,6 +46,10 @@ options '/*' do
   headers['Access-Control-Allow-Origin'] = '*' << spellbot_domain
   headers['Access-Control-Allow-Methods'] = 'POST'
   headers['Access-Control-Allow-Headers'] = 'accept, authorization, origin'
+end
+
+get '/*' do
+  redirect 'https://github.com/strangeman/spellbot-telegram'
 end
 
 post '/spell' do
