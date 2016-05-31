@@ -23,11 +23,11 @@ class SpellBot
           when '/info'
             @bot.api.sendMessage(chat_id: message.chat.id, text: "Sir, your chat_id is #{message.chat.id}")
           when '/help'
-            help_text = 'Bot commands'\
-                        '* /start - did nothing, just confirm that bot is works'\
-                        '* /info - returns your chat_id'\
-                        '* /help - returns commands explanation'\
-                        'Github: https://github.com/strangeman/spellbot-telegram'
+            help_text = "Bot commands: \n"\
+                        "* /start - did nothing, just confirm that bot is works\n"\
+                        "* /info - returns your chat_id\n"\
+                        "* /help - returns commands explanation\n"\
+                        "Github: https://github.com/strangeman/spellbot-telegram\n"
             @bot.api.sendMessage(chat_id: message.chat.id, text: help_text)
           end
         end
