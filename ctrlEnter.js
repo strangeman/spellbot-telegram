@@ -41,6 +41,15 @@ jQuery(document).ready(function($) {
         var range = selection.getRangeAt (0);
         var content = range.toString();
         var url = $(location).attr('href');
+		var n = noty({
+		  text: 'Опечатка отправлена редакторам, спасибо!',
+		  animation: {
+		      open: {height: 'toggle'}, // jQuery animate function property object
+		      close: {height: 'toggle'}, // jQuery animate function property object
+		      easing: 'swing', // easing
+		      speed: 500 // opening & closing animation speed
+		  }
+		});
         $.post( "https://yourbot.com/spell", url + "\n" + content);
       }
     }    
