@@ -14,7 +14,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ice_nine (0.11.2)
     multipart-post (2.0.0)
-    rack (1.6.4)
+    rack (1.6.13)
     rack-protection (1.5.3)
       rack
     sinatra (1.4.7)
